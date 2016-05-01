@@ -1,0 +1,95 @@
+body{
+	color:white;
+	background:#101010;
+}
+article{
+	background: #333;
+	padding: 1em;
+}
+article:after,
+#pis:after{
+	content:'';
+	display:block;
+	height: 0;
+	width: 100%;
+	clear:both;
+}
+h1,h2,h3{
+	text-align:center;
+}
+#pis>#image{
+	float:right;
+	color:black;
+	
+	position:relative;
+	width: 640px;
+	height: 400px;	
+	background: url('img/2.jpg') no-repeat ;
+	border:1px solid lightgreen;
+}
+.newdiv{
+	float:left;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	width: 79px;
+	height: 79px;
+	content:'';
+	background: gray;
+}
+.newdiv:hover{
+	/*background: lightgreen;*/
+}
+
+#pis{
+	position: relative;
+	width: 97%;
+	margin:1em auto;
+	border:1px solid gray;	
+}
+.litle{
+	width: 80px;
+	height: 80px;
+	border:1px solid black;
+	overflow: hidden;
+	position:relative;
+	display:inline-block;
+	margin-top:-5px;
+}
+.litle>img{
+	position:absolute;
+}
+#drag{
+	cursor:pointer;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	position:relative;
+}
+#drag>img{
+	position:absolute;
+	top:-175px;
+	left:-50px;
+}
+
+#inf{	
+	clear:both;	
+	padding: 1em;
+}
+
+#pis .privey{
+	top:1em;
+	background:darkblue;
+	right:1em;
+	width: 200px;
+	position:absolute;
+	background-size: cover;
+	color:white;
+	
+}
+#pis .privey:hover{
+	background: url('img/2.jpg') no-repeat center;
+	height: 150px;
+	background-size: contain;
+	z-index:100;
+	cursor:pointer;
+}
