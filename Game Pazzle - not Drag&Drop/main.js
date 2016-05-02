@@ -1,5 +1,4 @@
-var cel 	= image;
-var log 	= 0;
+﻿var log 	= 0;
 var visible = true;
 var posObjStartX,posObjStartY;
 
@@ -11,7 +10,7 @@ var posCelYbot 	;
 
 
 var image 		= document.getElementById('image');
-var pis 	= document.getElementById('pis');
+var pis 		= document.getElementById('pis');
 var information = document.getElementById('info');	
 
 // Функция для создания блоков в которые надо закидывать
@@ -42,6 +41,20 @@ function wathDiv(){
 	
 };
 var target = image;
+var cel    = document.getElementById('hideBlok-1');
+// Timer
+var sec = 0;
+var min = 0;  
+var timerDiv = document.getElementById('timer');
+var timerID = setInterval( function(){
+	sec++ ;
+	if(sec<10){sec='0'+sec};
+	if (sec>59) {
+			min++;
+			sec = 0;
+		};
+timerDiv.innerHTML = 'Затрачено времени '+min+':'+sec; 
+},1000);
 
 function mousedown(e){
 	target = this.parentNode ;
@@ -80,13 +93,13 @@ document.addEventListener('mousemove',function(event){
 			var posY = event.pageY;//определяем положение мыши
 			
 			info.innerHTML = /*'<p>posX='+posX+'; posY='+ posY+'; log='+log+'||| posObjStartX='+posObjStartX
-			+';posObjStartY='+posObjStartY+';*/'cel='+cel.getAttribute('data-info')+'</p>';
+			+';posObjStartY='+posObjStartY+';*/'cel='+cel.getAttribute('data-info')+'</p>'; 
 
 			if(log){			
 			target.style='top:'+(posY-40)+'px;left:'+(posX-50)+'px;z-index:1';
 
 			};
-			//проверка на положение элемента над нашим блоком, имитация hover
+			// имитация hover
 			// if(((posTarX>posCelX)&&(posCelXright>posTarX)) && ((posCelYbot>posTarY)&&(posTarY>posCelY))){
 			// 	cel.classList.add('backgrRed');
 			// }else if(visible){				
