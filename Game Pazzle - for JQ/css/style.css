@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+body{
+	color:white;
+	background:#3a5649;
+	font-family: 'Neucha', cursive;
+	letter-spacing:.05em;
+}
+article{
+	background: #333;
+	padding: 1em;
+}
+article:after,
+.pis:after{
+	content:'';
+	display:block;
+	height: 0;
+	width: 100%;
+	clear:both;
+}
+h1,h2,h3{
+	text-align:center;
+	text-transform: uppercase;
+}
+.pis>#image{
+	float:right;
+	color:black;	
+	position:relative;
+	width: 640px;
+	height: 400px;	
+	background: url('../images/2.jpg') no-repeat ;
+	border:1px solid black;
+}
+.newdiv{
+	position:absolute;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	width: 79px;
+	height: 79px;
+	background: gray;
+}
+#timer, .preview{
+	padding: .3em;
+	margin:.5em 1em;
+	display:inline-block;
+	text-align: center;
+	background:#669999;
+	width: 200px;
+	color:white;
+	border-right: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+.pis{
+	vertical-align: top;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 2em;
+	background: #666699 ;
+	position: relative;
+	width: 40%;
+	/*min-width: 1100px;*/
+	border:1px solid gray;	
+}
+#collection{
+	position:relative;
+	border:1px solid red;
+	width: 450px;
+	height: 400px;
+}
+.litle{
+	width: 80px;
+	height: 80px;
+	border:1px solid black;
+	overflow: hidden;
+	position:absolute;
+	margin-top:-5px;
+}
+.litle:hover{
+	cursor: pointer;
+}
+.litle>img{
+	position:absolute;
+}
+.backgrRed{
+	background: red;
+}
+.displayNone{
+	display:none;
+	border:none;
+}
+#drag{
+	cursor:pointer;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	position:relative;
+}
+#drag>img{
+	position:absolute;
+	top:-175px;
+	left:-50px;
+}
+#info{
+	position:absolute;
+	background: black;
+	top:0;
+	left:600px;
+	padding: 1em;
+}
+.pis .privey{
+	text-align: center;
+	padding: .3em;
+	top:1em;
+	background:rgba(100,100,200,.7);
+	right:2em;
+	width: 200px;
+	position:absolute;
+	background-size: cover;
+	color:white;
+	border-radius:5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+.pis .privey:hover{
+	background: url('../images/2.jpg') no-repeat center;
+	height: 150px;
+	background-size: contain;
+	z-index:100;
+	cursor:pointer;
+	color:transparent;
+}
+#target{
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position:absolute;
+	bottom:0px;
+	left:80px;
+	z-index: 10;
+}
+#target img{
+	position:absolute;
+	top:-300px;
+	left:-300px;
+}
+#cel{
+	width: 80px;
+	height: 80px;
+	border: 1px solid red;
+	position:absolute;
+	bottom:0px;
+	right: 80px;
+}
+#cel:hover{
+	background: lightgreen;
+}
+.play-field{
+	display: inline-block;
+	width: 59%;
+	background: rgba(100,100,200,.7);
+	vertical-align: top;
+	text-align: right;
+	position:relative;
+}
+.game-info{
+	position:relative;
+}
+.preview{
+	position: absolute;
+	right: 0;
+}
+.game-wrapper{
+	display: flex;
+	justify-content: space-around;
+}
+.preview:hover {
+	width: 320px;
+	height: 240px;
+	background: url('../images/2.jpg') no-repeat ;
+	background-size:cover;
+	z-index: 200;
+	cursor:pointer;
+}
+.field{
+	width: 640px;
+	height:480px;
+	margin: 1em auto;
+	display: flex;
+	background: url('../images/2.jpg') no-repeat;
+	flex-wrap: wrap;
+}
+.field div[class^='img-hidden-']{
+	box-sizing: border-box;
+	background: gray ;
+	border:1px solid black;
+}
+.field div[class^='img-hidden-']:hover{
+	cursor:pointer;
+}
+[class^='puzzle-']{
+	background: url('../images/2.jpg') no-repeat;
+	position:absolute;
+	z-index:10;
+}
+.win{
+	display: none;
+	position: absolute;
+	background: gray;
+	color: black;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+	width: 50%;
+	top: 15%;
+	padding: 4% 2%;
+	left: 25%;
+	border-radius: 5px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.7);
+}
+[class^='img-hidden-'] .hovered{
+	background: red;
+}

@@ -40,9 +40,10 @@ function wathDiv(){
 		};
 	
 };
+
+// Timer
 var target = image;
 var cel    = document.getElementById('hideBlok-1');
-// Timer
 var sec = 0;
 var min = 0;  
 var timerDiv = document.getElementById('timer');
@@ -76,7 +77,6 @@ function mousedown(e){
 
 function mouseup(e){
 	log = 0;
-	
 	
 };
 
